@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "sass": "^1.71.1"
+  },
+  "scripts": {
+    "components": "sass --watch assets/scss/components/_all_components.scss assets/css/all_components.css --style compressed",
+    "base": "sass --watch assets/scss/base/_base.scss assets/css/base.css --style compressed",
+    "home": "sass --watch assets/scss/pages/_home.scss assets/css/home.css --style compressed",
+    "landing": "sass --watch assets/scss/pages/_landing.scss assets/css/landing.css --style compressed",
+    "about": "sass --watch assets/scss/pages/_about-us.scss assets/css/about-us.css --style compressed",
+    "blog": "sass --watch assets/scss/pages/_blog.scss assets/css/blog.css --style compressed",
+    "blog-single": "sass --watch assets/scss/pages/_blog-single.scss assets/css/blog-single.css --style compressed",
+    "contact-us": "sass --watch assets/scss/pages/_contact-us.scss assets/css/contact-us.css --style compressed",
+    "font": "sass --watch assets/scss/base/_fonts.scss assets/css/fonts.css --style compressed",
+    "compile-main-sass": "sass --watch theme_styles.scss theme_styles.css --style compressed",
+    "compile-sass": "concurrently  \"npm run compile-main-sass\" \"npm run components\" \"npm run base\" \"npm run font\" \"npm run home\" \"npm run landing\" \"npm run blog\" \"npm run blog-single\" \"npm run contact-us\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
